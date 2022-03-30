@@ -1,0 +1,60 @@
+{
+  "runTests": true,
+  "runScopes": [
+    {
+      "name": "all",
+      "run": true
+    }
+  ],
+  "logging": {
+    "on" : true,
+    "filename" : "stdout",
+    "logs" : {}
+  },
+  "outputEngine": {
+    "type": "json",
+    "config": {
+       "outputFile" : "vv-output.json"
+    }
+  },
+  "injectionPoints": [
+      {
+        "package" : "VNV",
+        "name" : "configuration",
+        "tests" : [
+            {
+                "package" : "VNV",
+                "name" : "provenance",
+                "runScope" : ["all"],
+                "config" : {
+                    "expectedResult" : {},
+                    "configuration": {},
+                    "parameters": {
+                        "argc" : "argc",
+                        "argv" : "argv",
+                        "config" : "config"
+                    }
+                }
+            }
+        ]
+      },
+      {
+        "package" : "SIMPLE",
+        "name" : "point",
+        "tests" : [
+            {
+                "package" : "SIMPLE",
+                "name" : "test",
+                "runScope" : ["all"],
+                "config" : {
+                    "expectedResult" : {},
+                    "configuration": {},
+                    "parameters": {
+                        "number" : "i"
+                    }
+                }
+            }
+        ]
+      }
+    ]
+}
