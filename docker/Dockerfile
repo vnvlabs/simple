@@ -15,3 +15,4 @@ RUN  cd ${SOURCE_DIR}/simple \
 
 ENV VNV_CONFIG=${VNV_CONFIG}:${SOURCE_DIR}/simple/build/vnv.__registration__
 
+ENV VNV_CONFIG=${VNV_CONFIG}:${SOURCE_DIR}/simple/docker/config/vnv.__registration__
