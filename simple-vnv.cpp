@@ -31,7 +31,7 @@ int main(int argc, char **argv) {
   /**
     This is an injection point.
    **/
-  INJECTION_POINT(SIMPLE, VSELF, point, i);
+  INJECTION_POINT(SIMPLE, VSELF, point, VNV_NOCALLBACK, i);
 
   VnV_Info(SIMPLE, "i = %d", i);
   INJECTION_FINALIZE("SIMPLE");
