@@ -3,15 +3,19 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(Simple)
+find_package(MPI REQUIRED)
+find_package(Injection REQUIRED)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-find_package(Injection REQUIRED)
-add_executable(simple.a "simple-vnv.cpp")
-link_vnv_file(simple.a SIMPLE cpp)
+add_subdirectory(basic)
+add_subdirectory(c)
+add_subdirectory(cpp)
+add_subdirectory(fortran)
+add_subdirectory(library)
+add_subdirectory(plugin)
+add_subdirectory(read)
 
-install(TARGETS simple.a DESTINATION ${CMAKE_INSTALL_PREFIX})
-install(FILES vnv-input.json DESTINATION ${CMAKE_INSTALL_PREFIX})
 
 
 
