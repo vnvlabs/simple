@@ -12,5 +12,4 @@ RUN  cd ${SOURCE_DIR}/simple \
      && cp -r ../vnv/config ${SOFTWARE_DIR}/simple/gui \
      && rm -r ${SOURCE_DIR}/simple
 
-RUN echo ${SOFTWARE_DIR}/simple/gui/vnv.__registration__  >> ${HOME}/.vnv
-
+RUN python3 ${VNV_DIR}/scripts/register.py register ${SOFTWARE_DIR}/simple/gui/vnv.__registration__ 
