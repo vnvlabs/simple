@@ -156,7 +156,7 @@ INJECTION_TEST(LineExample, line) {
  *
  * @return * Register
  */
-INJECTION_EXECUTABLE(LineExample)
+INJECTION_EXECUTABLE(LineExample,"{}")
 
 /**
  * VnV Examples: Line Charts

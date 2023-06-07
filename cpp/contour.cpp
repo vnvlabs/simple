@@ -51,7 +51,7 @@ INJECTION_TEST(ContourExample, contour) {
  * This application uses VnV and Plotly to demonstrate how appplication data can be injected
  * directly into a contour plot.
  */
-INJECTION_EXECUTABLE(ContourExample)
+INJECTION_EXECUTABLE(ContourExample,"{}")
 
 int main(int argc, char** argv) {
   MPI_Init(&argc, &argv);

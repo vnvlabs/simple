@@ -17,7 +17,7 @@ using namespace VnV;
  *
  * This example deomnstrates VnV support for collecting Vector data across iterations.
  */
-INJECTION_EXECUTABLE(VectorsExample)
+INJECTION_EXECUTABLE(VectorsExample,"{}")
 
 int main(int argc, char** argv) {
   INJECTION_INITIALIZE(VectorsExample, &argc, &argv, (argc == 2) ? argv[1] : "./inputfiles/vectors.json");

@@ -11,7 +11,7 @@
 #include <iostream>
 using namespace std;
 
-INJECTION_EXECUTABLE(SIMPLE);
+INJECTION_EXECUTABLE(SIMPLE,"{}");
 
 /**
   This is an injection test.

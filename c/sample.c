@@ -29,7 +29,7 @@ INJECTION_OPTIONS(PNAME,schemaCallback,void){
   return NULL;
 }
 
-INJECTION_EXECUTABLE(PNAME)
+INJECTION_EXECUTABLE(PNAME,"{}")
 
 int main(int argc, char** argv) {
 

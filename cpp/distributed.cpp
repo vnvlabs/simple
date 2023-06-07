@@ -7,7 +7,7 @@
 #include "VnV.h"
 #define SPNAME Distributed
 
-INJECTION_EXECUTABLE(SPNAME)
+INJECTION_EXECUTABLE(SPNAME,"{}")
 
 /*
  *  This test writes a distributed vector to file. It requires a

@@ -12,7 +12,7 @@
 #include "VnV.h"
 
 #define SPNAME SimpleExecutable
-INJECTION_EXECUTABLE(SPNAME)
+INJECTION_EXECUTABLE(SPNAME,"{}")
 
 int main(int argc, char** argv) {
   MPI_Init(&argc, &argv);

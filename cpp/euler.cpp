@@ -43,7 +43,7 @@ double df(double x, double y) {
  * rapidly like this one.
  *
  */
-INJECTION_EXECUTABLE(Euler)
+INJECTION_EXECUTABLE(Euler,"{}")
 
 struct OptionsStruct {
   double dt;

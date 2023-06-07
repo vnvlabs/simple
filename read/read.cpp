@@ -4,7 +4,7 @@
 #define RPNAME SampleReader
 #include "VnV.h"
 #include "python/PythonInterface.h"
-INJECTION_EXECUTABLE(RPNAME)
+INJECTION_EXECUTABLE(RPNAME,"{}")
 
 int main(int argc, char** argv) {
   if (argc != 3) {

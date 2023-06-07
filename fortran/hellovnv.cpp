@@ -5,7 +5,7 @@
  *
  *
  */
-INJECTION_EXECUTABLE(fortran)
+INJECTION_EXECUTABLE(fortran,"{}")
 
 /*
  * My Custom Test

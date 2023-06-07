@@ -97,7 +97,7 @@ INJECTION_TEST(FiniteDifferenceDerivative, finiteDifferenceDerivative) {
  *
  * @return * Register
  */
-INJECTION_EXECUTABLE(FiniteDifferenceDerivative)
+INJECTION_EXECUTABLE(FiniteDifferenceDerivative,"{}")
 
 /**
  *

@@ -15,7 +15,7 @@
 #define SPNAME SampleExecutable
 
 // Register the executable with VNV
-INJECTION_EXECUTABLE(SPNAME)
+INJECTION_EXECUTABLE(SPNAME,"{}")
 
 int main(int argc, char** argv) {
   /**
