@@ -12,4 +12,4 @@ RUN  cd ${SOURCE_DIR}/simple \
      && cp -r ../vnv/config ${SOFTWARE_DIR}/simple/gui \
      && rm -r ${SOURCE_DIR}/simple
 
-ENV VNV_CONFIG=${VNV_CONFIG}:${SOFTWARE_DIR}/simple/gui/vnv.__registration__ 
+RUN ${VNV_REGISTER} gui simple ${SOFTWARE_DIR}/simple/gui/vnv.__registration__ 
