@@ -7,4 +7,16 @@
         "message" : "RNET Technolgies Inc.",
         "link" : "https://rnet-tech.com"
     }
+    "executables" : {
+        "Plotting Lines" : {
+            "filename" : "${SOFTWARE_DIR}/simple/line",
+            "description" : "Simple Example Demoing VnV Plotting capabilities",
+            "package" : "VnV"
+        },
+        "Euler Solver" : {
+            "filename" : "${SOFTWARE_DIR}/simple/euler",
+            "description" : "Simple Example Applying VnV to a basic Forward Euler ODE Solver",
+            "package" : "VnV"
+        }
+    }
 }
