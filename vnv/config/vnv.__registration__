@@ -6,7 +6,7 @@
     "copyright" : {
         "message" : "RNET Technolgies Inc.",
         "link" : "https://rnet-tech.com"
-    }
+    },
     "executables" : {
         "Plotting Lines" : {
             "filename" : "${SOFTWARE_DIR}/simple/line",
