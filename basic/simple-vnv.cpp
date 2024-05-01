@@ -17,7 +17,7 @@ INJECTION_EXECUTABLE(SIMPLE,"{}");
   This is an injection test.
 **/
 INJECTION_TEST(SIMPLE, test) {
-  auto number = GetRef_NoCheck("number",int);
+  auto number = GetRef("number",int);
   cout << "The number is " << number << endl;
   return SUCCESS;
 }

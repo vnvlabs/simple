@@ -29,9 +29,9 @@ using namespace VnV;
  *
  **/
 INJECTION_TEST(ContourExample, contour) {
-  auto x = GetRef_NoCheck("x", std::vector<double>);
-  auto y = GetRef_NoCheck("y", std::vector<double>);
-  auto z = GetRef_NoCheck("z", std::vector<std::vector<double>>);
+  auto x = GetRef("x", std::vector<double>);
+  auto y = GetRef("y", std::vector<double>);
+  auto z = GetRef("z", std::vector<std::vector<double>>);
 
   engine->Put_Vector("x", x);
   engine->Put_Vector("y", y);

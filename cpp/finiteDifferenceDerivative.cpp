@@ -73,12 +73,12 @@ const double PI = 3.1415926535;
  *
  **/
 INJECTION_TEST(FiniteDifferenceDerivative, finiteDifferenceDerivative) {
-  auto phase_vals = GetRef_NoCheck("phase_vals", std::vector<double>);
-  auto sine_vals = GetRef_NoCheck("sine_vals", std::vector<double>);
-  auto cosine_vals = GetRef_NoCheck("cosine_vals", std::vector<double>);
-  auto mesh_phase_vals = GetRef_NoCheck("mesh_phase_vals", std::vector<double>);
-  auto diff_cosine_vals = GetRef_NoCheck("diff_cosine_vals", std::vector<double>);
-  auto mesh_cosine_vals = GetRef_NoCheck("mesh_cosine_vals", std::vector<double>);
+  auto phase_vals = GetRef("phase_vals", std::vector<double>);
+  auto sine_vals = GetRef("sine_vals", std::vector<double>);
+  auto cosine_vals = GetRef("cosine_vals", std::vector<double>);
+  auto mesh_phase_vals = GetRef("mesh_phase_vals", std::vector<double>);
+  auto diff_cosine_vals = GetRef("diff_cosine_vals", std::vector<double>);
+  auto mesh_cosine_vals = GetRef("mesh_cosine_vals", std::vector<double>);
 
   engine->Put_Vector("phase_vals", phase_vals);
   engine->Put_Vector("sine_vals", sine_vals);

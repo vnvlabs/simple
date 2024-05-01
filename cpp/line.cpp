@@ -119,19 +119,19 @@ using namespace VnV;
  **/
 INJECTION_TEST(LineExample, line) {
   // Tests have direct access to the variables passed by the injection point. The fastest way to access variables
-  // in to use the GetRef_NoCheck macro. This macro takes two parameters, the variable name, and the class of the
+  // in to use the GetRef macro. This macro takes two parameters, the variable name, and the class of the
   // variable. VnV passes injection point parameters around using void* pointers. Thus, to access the injection point
   // parameters, the user must know the type of the parameter.
 
-  // GetRef_NoCheck casts from void* through to <type>* before returning a <type>& reference. The NoCheck option turns
+  // GetRef casts from void* through to <type>* before returning a <type>& reference. The NoCheck option turns
   // off implicit VnV type checking (which is still a little buggy, exspecially when templates are involved.) Once the
-  // bugs are ironed out, we will depreciate the GetRef_NoCheck macro.
+  // bugs are ironed out, we will depreciate the GetRef macro.
 
-  auto t = GetRef_NoCheck("t", double);
+  auto t = GetRef("t", double);
 
-  auto x = GetRef_NoCheck("x", std::vector<double>);
-  auto y = GetRef_NoCheck("y", std::vector<double>);
-  auto z = GetRef_NoCheck("z", std::vector<double>);
+  auto x = GetRef("x", std::vector<double>);
+  auto y = GetRef("y", std::vector<double>);
+  auto z = GetRef("z", std::vector<double>);
 
   // The engine object is used to store data. In this case, the user has stored the value "t" with the name "time".
   // Statements of the type engine->Put() are considered to be global varaibles. Thus, engine->Put statements only have

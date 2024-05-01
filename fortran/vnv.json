@@ -4,7 +4,7 @@
     "DummyTestLibOne" : "../tests/libdummyTestLibOne.so"
   },
   "outputEngine": {
-    "json_file" : {
+    "file" : {
        "filename" : "outputs/injectionPoint/out"
     }
   },

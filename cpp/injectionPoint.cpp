@@ -1,4 +1,5 @@
 ﻿
+
 #include <mpi.h>
 #include <time.h>
 
@@ -14,7 +15,13 @@
 
 #define SPNAME SampleExecutable
 
-// Register the executable with VNV
+/**
+ * INJECTION EXECUTABLE
+ * --------------------
+ * 
+ * Welcome to the machine.
+ * 
+ */
 INJECTION_EXECUTABLE(SPNAME,"{}")
 
 int main(int argc, char** argv) {
@@ -30,6 +37,19 @@ int main(int argc, char** argv) {
   INJECTION_INITIALIZE(SPNAME, &argc, &argv, (argc == 2) ? argv[1] : "./inputfiles/injectionPoint.json");
 
   std::vector<int> samplePoints;
+
+   /**
+   * Sample Executable
+   * =================
+   *
+   * This executable is designed to show a number of different injection points.
+   * The first stage is to initialize the library. The text that appears in the
+   * comment above the initialize call represents the introduction in the final
+   * report.
+   */
+   INJECTION_INPUT_FILE(SPNAME, EULERINPUT, VWORLD, "Makefile", "Makefile")
+  
+   INJECTION_INPUT_FILE(SPNAME, EULEROUT, VWORLD, "test.cpp", "test.cpp")
 
   /**
    *  A Simple Injection Point Loop
