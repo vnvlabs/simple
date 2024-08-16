@@ -33,7 +33,7 @@ INJECTION_EXECUTABLE(PNAME,"{}")
 
 int main(int argc, char** argv) {
 
-  INJECTION_INITIALIZE(PNAME, &argc, &argv, (argc==2) ? argv[1] : "./sample.json");
+  INJECTION_INITIALIZE(PNAME, &argc, &argv);
   function1(10);
   INJECTION_FINALIZE(PNAME);
 

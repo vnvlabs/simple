@@ -20,7 +20,7 @@ using namespace VnV;
 INJECTION_EXECUTABLE(VectorsExample,"{}")
 
 int main(int argc, char** argv) {
-  INJECTION_INITIALIZE(VectorsExample, &argc, &argv, (argc == 2) ? argv[1] : "./inputfiles/vectors.json");
+  INJECTION_INITIALIZE(VectorsExample, &argc, &argv);
 
   // Lets make a matrix of size 10x10 with w[i,j] = i*10 + j
   std::vector<std::vector<double>> w;

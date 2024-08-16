@@ -27,8 +27,8 @@ int class1::function2(int y) {
 // functions for VnV to use in applications using the library.
 INJECTION_LIBRARY_NOCLANG(DummyApplication, DLPNAME);
 
-void DummyVnV::Initialize(int argc, char** argv, const char* filename) {
-  INJECTION_INITIALIZE(DummyApplication, &argc, &argv, filename);
+void DummyVnV::Initialize(int argc, char** argv) {
+  INJECTION_INITIALIZE(DummyApplication, &argc, &argv);
 }
 
 void DummyVnV::Finalize() { INJECTION_FINALIZE(DummyApplication); }

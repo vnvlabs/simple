@@ -9,10 +9,9 @@
     }
   },
   "injectionPoints": {
-     "VNV:initialization" : {
-        "tests" : {
-          "VNV:cputime" : {}
-	      }
-     }	     
+       "runAll" : true,
+       "tests" : {
+        "VNV:cputime" : {}
+       }
   }
 }

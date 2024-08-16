@@ -12,7 +12,7 @@ class class1 {
 }  // namespace dummyLibOne
 
 namespace DummyVnV {
-void Initialize(int argc, char** argv, const char* filename);
+void Initialize(int argc, char** argv);
 void Finalize();
 }  // namespace DummyVnV
 

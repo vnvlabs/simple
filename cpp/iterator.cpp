@@ -27,17 +27,10 @@ int main(int argc, char** argv) {
    * This executable evaluates the function
    *     f = 10x^2 -200 .
    */
-  INJECTION_INITIALIZE(SPNAME, &argc, &argv, (argc == 2) ? argv[1] : "./inputfiles/iterator.json");
+  INJECTION_INITIALIZE(SPNAME, &argc, &argv);
 
   double f = 0;
   double x = 0;
-
-  /**
-   * Function evaluation for  f = 10x^2 - 200.
-   * -----------------------------------------
-   *
-   */
-  INJECTION_ITERATION(zx, SPNAME, VSELF, FunctionEvaluation, 1, VNV_NOCALLBACK, x, f) { f = 10 * x * x - 200; }
 
   /**
      Conclusion.

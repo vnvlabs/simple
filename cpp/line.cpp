@@ -197,7 +197,7 @@ INJECTION_OPTIONS(LineExample, "{}", void) { return NULL; }
 int main(int argc, char** argv) {
   MPI_Init(&argc, &argv);
 
-  INJECTION_INITIALIZE(LineExample, &argc, &argv, (argc == 2) ? argv[1] : "./inputfiles/line.json");
+  INJECTION_INITIALIZE(LineExample, &argc, &argv);
 
   int rank, world;
 

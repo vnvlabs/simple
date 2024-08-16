@@ -79,7 +79,7 @@ int main(int argc, char** argv) {
    * This example illustrates the "live" capabilities on the vnv toolkit.
    *
    */
-  INJECTION_INITIALIZE(SPNAME, &argc, &argv, "./inputfiles/live.json");
+  INJECTION_INITIALIZE(SPNAME, &argc, &argv);
 
   double f = 0;
   double x = 0;

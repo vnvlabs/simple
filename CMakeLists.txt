@@ -8,10 +8,9 @@ find_package(Injection REQUIRED)
 set(WITH_MPI ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-add_subdirectory(basic)
 add_subdirectory(c)
 add_subdirectory(cpp)
-add_subdirectory(fortran)
+#add_subdirectory(fortran)
 add_subdirectory(library)
 add_subdirectory(plugin)
 

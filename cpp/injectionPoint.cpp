@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
    * comment above the initialize call represents the introduction in the final
    * report.
    */
-  INJECTION_INITIALIZE(SPNAME, &argc, &argv, (argc == 2) ? argv[1] : "./inputfiles/injectionPoint.json");
+  INJECTION_INITIALIZE(SPNAME, &argc, &argv);
 
   std::vector<int> samplePoints;
 
@@ -60,10 +60,27 @@ int main(int argc, char** argv) {
 
   **/
   INJECTION_LOOP_BEGIN(SPNAME, VSELF, Function1, VNV_NOCALLBACK, samplePoints);
+
+  /**
+   *  A Second Injection Point Loop
+   *  -----------------------------
+   *
+   *  This injection point loop tracks the values in the vector sample
+   *  points. This one is nested, but the iters wont be to test
+
+  **/
+  
+  INJECTION_LOOP_BEGIN(SPNAME, VSELF, Function2,  VNV_NOCALLBACK, samplePoints);
+  
   for (int i = 0; i < 10; i++) {
     samplePoints.push_back(i);
     INJECTION_LOOP_ITER(SPNAME, Function1, "inner", VNV_NOCALLBACK);
+    INJECTION_LOOP_ITER(SPNAME, Function2, "inner", VNV_NOCALLBACK);
+  
   }
+  
+  INJECTION_LOOP_END(SPNAME, Function2, VNV_NOCALLBACK);
+
   INJECTION_LOOP_END(SPNAME, Function1, VNV_NOCALLBACK);
 
   INJECTION_FINALIZE(SPNAME);

@@ -165,8 +165,7 @@ int main(int argc, char** argv) {
    * rapidly like this one.
    *
    */
-  INJECTION_INITIALIZE_C(Euler, &argc, &argv, (argc > 1) ? argv[1] : "inputfiles/euler.json",
-                         [](VnV_Comm comm, VnV::IOutputEngine* engine) { engine->Put("Fish", "Power"); });
+  INJECTION_INITIALIZE_C(Euler, &argc, &argv, [](VnV_Comm comm, VnV::IOutputEngine* engine) { engine->Put("Fish", "Power"); });
 
   auto config = (OptionsStruct*)INJECTION_GET_CONFIG(Euler);
   auto dt = config->dt;

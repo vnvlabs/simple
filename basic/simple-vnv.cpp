@@ -23,7 +23,7 @@ INJECTION_TEST(SIMPLE, test) {
 }
 
 int main(int argc, char **argv) {
-  INJECTION_INITIALIZE(SIMPLE, &argc, &argv, "vnv-input.json");
+  INJECTION_INITIALIZE(SIMPLE, &argc, &argv);
 
   cout << "Simple test of VnV" << endl;
   int i = 5;

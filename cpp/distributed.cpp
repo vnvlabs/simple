@@ -25,8 +25,8 @@ INJECTION_EXECUTABLE(SPNAME,"{}")
  *          "labels" : $$ydata$$,
  *          "datasets" : [{
  *             "label": "Recorded CPU Times",
- *             "backgroundColor": "rgb(255, 99, 132)",
- *             "borderColor": "rgb(255, 99, 132)",
+ *             "backgroundColor": "rgb(57, 105, 160)",
+ *             "borderColor": "rgb(57, 105, 160)",
  *             "data": $$ydata$$
  *           }]
  *       }
@@ -216,7 +216,7 @@ int main(int argc, char** argv) {
    *    This comment will show up in the final report as the introduction. It
    * supports restructured text markup.
    */
-  INJECTION_INITIALIZE(SPNAME, &argc, &argv, "./inputfiles/distributed.json");
+  INJECTION_INITIALIZE(SPNAME, &argc, &argv);
 
   // Assign the global vector. This is a vector of "doubles" where
   // the values is g[i] = i. The vector is distributed across the processes

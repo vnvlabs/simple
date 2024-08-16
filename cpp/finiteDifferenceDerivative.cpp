@@ -107,8 +107,7 @@ INJECTION_OPTIONS(FiniteDifferenceDerivative, "{}") { return NULL; }
 double deriv(std::vector<double>&, int&, double&, char);
 
 int main(int argc, char** argv) {
-  INJECTION_INITIALIZE(FiniteDifferenceDerivative, &argc, &argv,
-                       (argc == 2) ? argv[1] : "./inputfiles/finiteDifferenceDerivative.json");
+  INJECTION_INITIALIZE(FiniteDifferenceDerivative, &argc, &argv);
 
   // create true version of sinusoids
   auto true_ptsPerPeriod = 15000;

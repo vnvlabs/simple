@@ -8,8 +8,4 @@ RUN  cd ${SOURCE_DIR}/simple \
      && cd build \
      && cmake -DInjection_DIR=${VNV_DIR}/lib/cmake -DCMAKE_INSTALL_PREFIX=${SOFTWARE_DIR}/simple .. \
      && make \
-     && make install  \
-     && cp -r ../vnv/config ${SOFTWARE_DIR}/simple/gui \
-     && rm -r ${SOURCE_DIR}/simple
-
-RUN ${VNV_REGISTER} gui simple ${SOFTWARE_DIR}/simple/gui/vnv.__registration__ 
+     && make install

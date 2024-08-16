@@ -56,7 +56,7 @@ INJECTION_EXECUTABLE(ContourExample,"{}")
 int main(int argc, char** argv) {
   MPI_Init(&argc, &argv);
 
-  INJECTION_INITIALIZE(ContourExample, &argc, &argv, (argc == 2) ? argv[1] : "./inputfiles/contour.json");
+  INJECTION_INITIALIZE(ContourExample, &argc, &argv);
 
   int rank, world;
 
